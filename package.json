@@ -1,0 +1,32 @@
+{
+  "name": "@layerg-ua-sdk/zkp-smc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "compile:circuits": "hardhat zkit compile",
+    "setup:keys": "hardhat zkit setup",
+    "make:circuits": "hardhat zkit make",
+    "generate:verifiers": "hardhat zkit verifiers",
+    "test": "hardhat test",
+    "clean": "hardhat clean && hardhat zkit clean",
+    "setup": "npm run make:circuits && npm run generate:verifiers && npm run compile",
+    "node": "hardhat node",
+    "deploy": "hardhat ignition deploy ignition/modules/SecretProofVerifier.ts --network localhost",
+    "demo": "npx hardhat run scripts/demo.ts --network localhost"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "A simple zk-SNARK application with on-chain verification",
+  "dependencies": {
+    "@solarity/hardhat-zkit": "^0.5.17",
+    "hardhat": "^2.26.1",
+    "circomlib": "^2.0.5",
+    "snarkjs": "^0.7.4"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

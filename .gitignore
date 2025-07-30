@@ -56,7 +56,6 @@ contracts/verifiers/
 *.wasm
 *.zkey
 *.vkey
-*.json
 
 # Logs
 *.log
@@ -143,3 +142,5 @@ Thumbs.db
 
 # Local development
 .local
+
+package-lock.json
